@@ -2,7 +2,9 @@
   "name": "automation-clio",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "clio": "npx playwright test --config ./web/clio/playwright.config.ts web/clio/scenarios"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
