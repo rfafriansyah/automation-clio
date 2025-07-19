@@ -3,14 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "clio": "npx playwright test --config ./web/clio/playwright.config.ts web/clio/scenarios"
+    "clio": "npx playwright test --config ./web/clio/playwright.config.ts web/clio/scenarios",
+    "test:e2e": "cucumber-js --require-module ts-node/register --require web/clio/support/world.ts --require web/clio/step_definitions/**/*.ts --config web/clio/cucumber.config.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.0.0",
+    "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.15"
+    "@types/node": "^24.0.15",
+    "@types/randomstring": "^1.3.0",
+    "allure-commandline": "^2.34.1",
+    "playwright": "^1.54.1",
+    "randomstring": "^1.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-json-schema": "^0.65.1"
   }
 }
